@@ -115,4 +115,5 @@ No outputs.
 | [nxos_feature_udld.fmUdld](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_udld) | resource |
 | [nxos_feature_vn_segment.fmVnSegment](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_vn_segment) | resource |
 | [nxos_feature_vpc.fmVpc](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_vpc) | resource |
+| [nxos_ospf.ospfEntity](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/ospf) | resource |
 <!-- END_TF_DOCS -->

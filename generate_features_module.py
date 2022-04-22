@@ -49,12 +49,21 @@ def generate_main(data):
 """
         if key in NOT_SUPPORTED_IN_NXOSV:
             count = "count       = var.nxosv_device ? 0 : 1\n  "
-        res = f"""resource "nxos_feature_{key}" "{value['class_name']}" {{
+        res = f"""
+resource "nxos_feature_{key}" "{value['class_name']}" {{
   {count}admin_state = var.{value['variable']} ? "enabled" : "disabled"
 {depends_on}}}
 """
         result.append(res)
-    write_data = "\n".join(result)
+    write_data = "".join(result).strip()
+    write_data += """\n
+resource "nxos_ospf" "ospfEntity" {
+  admin_state = "enabled"
+  depends_on = [
+    nxos_feature_ospf.fmOspf
+  ]
+}
+"""
     with open("main.tf", "w") as f:
         f.write(write_data)
 
@@ -62,15 +71,17 @@ def generate_main(data):
 def generate_variables(data):
     result = []
     for value in data.values():
-        res = f"""variable "{value['variable']}" {{
+        res = f"""
+variable "{value['variable']}" {{
   description = "Enable or disable command `{value['descr']}`."
   type        = bool
   default     = false
 }}
 """
         result.append(res)
-    write_data = "\n".join(result)
-    write_data += """variable "nxosv_device" {
+    write_data = "".join(result).strip()
+    write_data += """\n
+variable "nxosv_device" {
   description = "Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features."
   type        = bool
   default     = false

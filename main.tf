@@ -98,3 +98,10 @@ resource "nxos_feature_vn_segment" "fmVnSegment" {
 resource "nxos_feature_vpc" "fmVpc" {
   admin_state = var.vpc ? "enabled" : "disabled"
 }
+
+resource "nxos_ospf" "ospfEntity" {
+  admin_state = "enabled"
+  depends_on = [
+    nxos_feature_ospf.fmOspf
+  ]
+}
