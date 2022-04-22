@@ -144,5 +144,5 @@ variable "vpc" {
 variable "nxosv_device" {
   description = "Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features."
   type        = bool
-  default     = true
+  default     = false
 }

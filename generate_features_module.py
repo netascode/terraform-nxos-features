@@ -85,7 +85,7 @@ def generate_test(data, version, max_len):
     tf_data = []
     tf_resource = []
     for key, value in data.items():
-        module_data.append(f"  {value['variable']: <{max_len}} = true ")
+        module_data.append(f"  {value['variable']: <{max_len}} = true")
         if key not in NOT_SUPPORTED_IN_NXOSV:
             tf_data.append(
                 f"""data "nxos_rest" "nxos_feature_{key}" {{
@@ -105,7 +105,7 @@ def generate_test(data, version, max_len):
 """
             )
 
-    module_data.append(f"  {'nxosv_device': <{max_len}} = true ")
+    module_data.append(f"  {'nxosv_device': <{max_len}} = true")
     module_data = "\n".join(module_data)
     tf_data = "\n".join(tf_data)
     tf_resource = "\n".join(tf_resource)

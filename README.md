@@ -81,7 +81,7 @@ module "nxos_features" {
 | <a name="input_udld"></a> [udld](#input\_udld) | Enable or disable command `feature udld`. | `bool` | `false` | no |
 | <a name="input_vn_segment"></a> [vn\_segment](#input\_vn\_segment) | Enable or disable command `feature vn segment`. | `bool` | `false` | no |
 | <a name="input_vpc"></a> [vpc](#input\_vpc) | Enable or disable command `feature vpc`. | `bool` | `false` | no |
-| <a name="input_nxosv_device"></a> [nxosv\_device](#input\_nxosv\_device) | Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features. | `bool` | `true` | no |
+| <a name="input_nxosv_device"></a> [nxosv\_device](#input\_nxosv\_device) | Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features. | `bool` | `false` | no |
 
 ## Outputs
 
