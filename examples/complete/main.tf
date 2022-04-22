@@ -12,8 +12,6 @@ module "nxos_features" {
   isis              = true
   lacp              = true
   lldp              = true
-  macsec            = true
-  netflow           = true
   nv_overlay        = true
   ospf              = true
   ospfv3            = true
@@ -26,5 +24,4 @@ module "nxos_features" {
   udld              = true
   vn_segment        = true
   vpc               = true
-  nxosv_device      = true
 }
