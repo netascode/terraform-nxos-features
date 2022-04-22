@@ -57,31 +57,30 @@ module "nxos_features" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_bfd"></a> [bfd](#input\_bfd) | Enable or disable command `feature bfd`. | `bool` | `false` | no |
-| <a name="input_bgp"></a> [bgp](#input\_bgp) | Enable or disable command `feature bgp`. | `bool` | `false` | no |
-| <a name="input_dhcp"></a> [dhcp](#input\_dhcp) | Enable or disable command `feature dhcp`. | `bool` | `false` | no |
-| <a name="input_evpn"></a> [evpn](#input\_evpn) | Enable or disable command `nv overlay evpn`. | `bool` | `false` | no |
-| <a name="input_fabric_forwarding"></a> [fabric\_forwarding](#input\_fabric\_forwarding) | Enable or disable command `feature fabric forwarding`. | `bool` | `false` | no |
-| <a name="input_hsrp"></a> [hsrp](#input\_hsrp) | Enable or disable command `feature hsrp`. | `bool` | `false` | no |
-| <a name="input_interface_vlan"></a> [interface\_vlan](#input\_interface\_vlan) | Enable or disable command `feature interface-vlan`. | `bool` | `false` | no |
-| <a name="input_isis"></a> [isis](#input\_isis) | Enable or disable command `feature isis`. | `bool` | `false` | no |
-| <a name="input_lacp"></a> [lacp](#input\_lacp) | Enable or disable command `feature lacp`. | `bool` | `false` | no |
-| <a name="input_lldp"></a> [lldp](#input\_lldp) | Enable or disable command `feature lldp`. | `bool` | `false` | no |
-| <a name="input_macsec"></a> [macsec](#input\_macsec) | Enable or disable command `feature macsec`. | `bool` | `false` | no |
-| <a name="input_netflow"></a> [netflow](#input\_netflow) | Enable or disable command `feature netflow`. | `bool` | `false` | no |
-| <a name="input_nv_overlay"></a> [nv\_overlay](#input\_nv\_overlay) | Enable or disable command `feature nv overlay`. | `bool` | `false` | no |
-| <a name="input_ospf"></a> [ospf](#input\_ospf) | Enable or disable command `feature ospf`. | `bool` | `false` | no |
-| <a name="input_ospfv3"></a> [ospfv3](#input\_ospfv3) | Enable or disable command `feature ospfv3`. | `bool` | `false` | no |
-| <a name="input_pim"></a> [pim](#input\_pim) | Enable or disable command `feature pim`. | `bool` | `false` | no |
-| <a name="input_ptp"></a> [ptp](#input\_ptp) | Enable or disable command `feature ptp`. | `bool` | `false` | no |
-| <a name="input_pvlan"></a> [pvlan](#input\_pvlan) | Enable or disable command `feature pvlan`. | `bool` | `false` | no |
-| <a name="input_ssh"></a> [ssh](#input\_ssh) | Enable or disable command `feature ssh`. | `bool` | `false` | no |
-| <a name="input_tacacs"></a> [tacacs](#input\_tacacs) | Enable or disable command `feature tacacs`. | `bool` | `false` | no |
-| <a name="input_telnet"></a> [telnet](#input\_telnet) | Enable or disable command `feature telnet`. | `bool` | `false` | no |
-| <a name="input_udld"></a> [udld](#input\_udld) | Enable or disable command `feature udld`. | `bool` | `false` | no |
-| <a name="input_vn_segment"></a> [vn\_segment](#input\_vn\_segment) | Enable or disable command `feature vn segment`. | `bool` | `false` | no |
-| <a name="input_vpc"></a> [vpc](#input\_vpc) | Enable or disable command `feature vpc`. | `bool` | `false` | no |
-| <a name="input_nxosv_device"></a> [nxosv\_device](#input\_nxosv\_device) | Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features. | `bool` | `false` | no |
+| <a name="input_bfd"></a> [bfd](#input\_bfd) | Enable or disable command `feature bfd`. | `bool` | `null` | no |
+| <a name="input_bgp"></a> [bgp](#input\_bgp) | Enable or disable command `feature bgp`. | `bool` | `null` | no |
+| <a name="input_dhcp"></a> [dhcp](#input\_dhcp) | Enable or disable command `feature dhcp`. | `bool` | `null` | no |
+| <a name="input_evpn"></a> [evpn](#input\_evpn) | Enable or disable command `nv overlay evpn`. | `bool` | `null` | no |
+| <a name="input_fabric_forwarding"></a> [fabric\_forwarding](#input\_fabric\_forwarding) | Enable or disable command `feature fabric forwarding`. | `bool` | `null` | no |
+| <a name="input_hsrp"></a> [hsrp](#input\_hsrp) | Enable or disable command `feature hsrp`. | `bool` | `null` | no |
+| <a name="input_interface_vlan"></a> [interface\_vlan](#input\_interface\_vlan) | Enable or disable command `feature interface-vlan`. | `bool` | `null` | no |
+| <a name="input_isis"></a> [isis](#input\_isis) | Enable or disable command `feature isis`. | `bool` | `null` | no |
+| <a name="input_lacp"></a> [lacp](#input\_lacp) | Enable or disable command `feature lacp`. | `bool` | `null` | no |
+| <a name="input_lldp"></a> [lldp](#input\_lldp) | Enable or disable command `feature lldp`. | `bool` | `null` | no |
+| <a name="input_macsec"></a> [macsec](#input\_macsec) | Enable or disable command `feature macsec`. | `bool` | `null` | no |
+| <a name="input_netflow"></a> [netflow](#input\_netflow) | Enable or disable command `feature netflow`. | `bool` | `null` | no |
+| <a name="input_nv_overlay"></a> [nv\_overlay](#input\_nv\_overlay) | Enable or disable command `feature nv overlay`. | `bool` | `null` | no |
+| <a name="input_ospf"></a> [ospf](#input\_ospf) | Enable or disable command `feature ospf`. | `bool` | `null` | no |
+| <a name="input_ospfv3"></a> [ospfv3](#input\_ospfv3) | Enable or disable command `feature ospfv3`. | `bool` | `null` | no |
+| <a name="input_pim"></a> [pim](#input\_pim) | Enable or disable command `feature pim`. | `bool` | `null` | no |
+| <a name="input_ptp"></a> [ptp](#input\_ptp) | Enable or disable command `feature ptp`. | `bool` | `null` | no |
+| <a name="input_pvlan"></a> [pvlan](#input\_pvlan) | Enable or disable command `feature pvlan`. | `bool` | `null` | no |
+| <a name="input_ssh"></a> [ssh](#input\_ssh) | Enable or disable command `feature ssh`. | `bool` | `null` | no |
+| <a name="input_tacacs"></a> [tacacs](#input\_tacacs) | Enable or disable command `feature tacacs`. | `bool` | `null` | no |
+| <a name="input_telnet"></a> [telnet](#input\_telnet) | Enable or disable command `feature telnet`. | `bool` | `null` | no |
+| <a name="input_udld"></a> [udld](#input\_udld) | Enable or disable command `feature udld`. | `bool` | `null` | no |
+| <a name="input_vn_segment"></a> [vn\_segment](#input\_vn\_segment) | Enable or disable command `feature vn segment`. | `bool` | `null` | no |
+| <a name="input_vpc"></a> [vpc](#input\_vpc) | Enable or disable command `feature vpc`. | `bool` | `null` | no |
 
 ## Outputs
 

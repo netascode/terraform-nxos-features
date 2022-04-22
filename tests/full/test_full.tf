@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     test = {
@@ -25,8 +24,6 @@ module "main" {
   isis              = true
   lacp              = true
   lldp              = true
-  macsec            = true
-  netflow           = true
   nv_overlay        = true
   ospf              = true
   ospfv3            = true
@@ -39,7 +36,6 @@ module "main" {
   udld              = true
   vn_segment        = true
   vpc               = true
-  nxosv_device      = true
 }
 
 data "nxos_rest" "nxos_feature_bfd" {

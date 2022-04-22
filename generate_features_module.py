@@ -47,10 +47,9 @@ def generate_main(data):
     nxos_feature_{value['depends_on']}.{data[value['depends_on']]['class_name']}
   ]
 """
-        if key in NOT_SUPPORTED_IN_NXOSV:
-            count = "count       = var.nxosv_device ? 0 : 1\n  "
         res = f"""
 resource "nxos_feature_{key}" "{value['class_name']}" {{
+  count       = var.{value['variable']} != null ? 1 : 0
   {count}admin_state = var.{value['variable']} ? "enabled" : "disabled"
 {depends_on}}}
 """
@@ -58,6 +57,7 @@ resource "nxos_feature_{key}" "{value['class_name']}" {{
     write_data = "".join(result).strip()
     write_data += """\n
 resource "nxos_ospf" "ospfEntity" {
+  count       = var.ospf == true ? 1 : 0
   admin_state = "enabled"
   depends_on = [
     nxos_feature_ospf.fmOspf
@@ -75,18 +75,11 @@ def generate_variables(data):
 variable "{value['variable']}" {{
   description = "Enable or disable command `{value['descr']}`."
   type        = bool
-  default     = false
+  default     = null
 }}
 """
         result.append(res)
-    write_data = "".join(result).strip()
-    write_data += """\n
-variable "nxosv_device" {
-  description = "Set true for NX-OSv devices. NX-OSv does not support features `macsec` and `netflow`, so module will not try to push config for these features."
-  type        = bool
-  default     = false
-}
-"""
+    write_data = "".join(result).strip() + "\n"
     with open("variables.tf", "w") as f:
         f.write(write_data)
 
@@ -96,8 +89,8 @@ def generate_test(data, version, max_len):
     tf_data = []
     tf_resource = []
     for key, value in data.items():
-        module_data.append(f"  {value['variable']: <{max_len}} = true")
         if key not in NOT_SUPPORTED_IN_NXOSV:
+            module_data.append(f"  {value['variable']: <{max_len}} = true")
             tf_data.append(
                 f"""data "nxos_rest" "nxos_feature_{key}" {{
   dn = "{value['dn']}"
@@ -116,13 +109,11 @@ def generate_test(data, version, max_len):
 """
             )
 
-    module_data.append(f"  {'nxosv_device': <{max_len}} = true")
     module_data = "\n".join(module_data)
     tf_data = "\n".join(tf_data)
     tf_resource = "\n".join(tf_resource)
 
-    write_data = f"""
-terraform {{
+    write_data = f"""terraform {{
   required_providers {{
     test = {{
       source = "terraform.io/builtin/test"
