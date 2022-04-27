@@ -54,6 +54,7 @@ module "nxos_features" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_device"></a> [device](#input\_device) | A device name from the provider configuration. | `string` | `null` | no |
 | <a name="input_bfd"></a> [bfd](#input\_bfd) | Enable or disable command `feature bfd`. | `bool` | `null` | no |
 | <a name="input_bgp"></a> [bgp](#input\_bgp) | Enable or disable command `feature bgp`. | `bool` | `null` | no |
 | <a name="input_dhcp"></a> [dhcp](#input\_dhcp) | Enable or disable command `feature dhcp`. | `bool` | `null` | no |

@@ -1,3 +1,9 @@
+variable "device" {
+  description = "A device name from the provider configuration."
+  type        = string
+  default     = null
+}
+
 variable "bfd" {
   description = "Enable or disable command `feature bfd`."
   type        = bool
