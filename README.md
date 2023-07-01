@@ -42,13 +42,13 @@ module "nxos_features" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.3.5 |
+| <a name="requirement_nxos"></a> [nxos](#requirement\_nxos) | >= 0.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.3.5 |
+| <a name="provider_nxos"></a> [nxos](#provider\_nxos) | >= 0.5.0 |
 
 ## Inputs
 
@@ -88,29 +88,29 @@ No outputs.
 
 | Name | Type |
 |------|------|
-| [nxos_feature_bfd.fmBfd](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_bfd) | resource |
-| [nxos_feature_bgp.fmBgp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_bgp) | resource |
-| [nxos_feature_dhcp.fmDhcp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_dhcp) | resource |
-| [nxos_feature_evpn.fmEvpn](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_evpn) | resource |
-| [nxos_feature_hmm.fmHmm](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_hmm) | resource |
-| [nxos_feature_hsrp.fmHsrp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_hsrp) | resource |
-| [nxos_feature_interface_vlan.fmInterfaceVlan](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_interface_vlan) | resource |
-| [nxos_feature_isis.fmIsis](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_isis) | resource |
-| [nxos_feature_lacp.fmLacp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_lacp) | resource |
-| [nxos_feature_lldp.fmLldp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_lldp) | resource |
-| [nxos_feature_macsec.fmMacsec](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_macsec) | resource |
-| [nxos_feature_netflow.fmNetflow](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_netflow) | resource |
-| [nxos_feature_nv_overlay.fmNvo](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_nv_overlay) | resource |
-| [nxos_feature_ospf.fmOspf](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_ospf) | resource |
-| [nxos_feature_ospfv3.fmOspfv3](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_ospfv3) | resource |
-| [nxos_feature_pim.fmPim](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_pim) | resource |
-| [nxos_feature_ptp.fmPtp](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_ptp) | resource |
-| [nxos_feature_pvlan.fmPvlan](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_pvlan) | resource |
-| [nxos_feature_ssh.fmSsh](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_ssh) | resource |
-| [nxos_feature_tacacs.fmTacacsplus](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_tacacs) | resource |
-| [nxos_feature_telnet.fmTelnet](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_telnet) | resource |
-| [nxos_feature_udld.fmUdld](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_udld) | resource |
-| [nxos_feature_vn_segment.fmVnSegment](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_vn_segment) | resource |
-| [nxos_feature_vpc.fmVpc](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/feature_vpc) | resource |
-| [nxos_ospf.ospfEntity](https://registry.terraform.io/providers/netascode/nxos/latest/docs/resources/ospf) | resource |
+| [nxos_feature_bfd.fmBfd](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_bfd) | resource |
+| [nxos_feature_bgp.fmBgp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_bgp) | resource |
+| [nxos_feature_dhcp.fmDhcp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_dhcp) | resource |
+| [nxos_feature_evpn.fmEvpn](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_evpn) | resource |
+| [nxos_feature_hmm.fmHmm](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_hmm) | resource |
+| [nxos_feature_hsrp.fmHsrp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_hsrp) | resource |
+| [nxos_feature_interface_vlan.fmInterfaceVlan](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_interface_vlan) | resource |
+| [nxos_feature_isis.fmIsis](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_isis) | resource |
+| [nxos_feature_lacp.fmLacp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_lacp) | resource |
+| [nxos_feature_lldp.fmLldp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_lldp) | resource |
+| [nxos_feature_macsec.fmMacsec](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_macsec) | resource |
+| [nxos_feature_netflow.fmNetflow](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_netflow) | resource |
+| [nxos_feature_nv_overlay.fmNvo](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_nv_overlay) | resource |
+| [nxos_feature_ospf.fmOspf](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_ospf) | resource |
+| [nxos_feature_ospfv3.fmOspfv3](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_ospfv3) | resource |
+| [nxos_feature_pim.fmPim](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_pim) | resource |
+| [nxos_feature_ptp.fmPtp](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_ptp) | resource |
+| [nxos_feature_pvlan.fmPvlan](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_pvlan) | resource |
+| [nxos_feature_ssh.fmSsh](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_ssh) | resource |
+| [nxos_feature_tacacs.fmTacacsplus](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_tacacs) | resource |
+| [nxos_feature_telnet.fmTelnet](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_telnet) | resource |
+| [nxos_feature_udld.fmUdld](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_udld) | resource |
+| [nxos_feature_vn_segment.fmVnSegment](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_vn_segment) | resource |
+| [nxos_feature_vpc.fmVpc](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/feature_vpc) | resource |
+| [nxos_ospf.ospfEntity](https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs/resources/ospf) | resource |
 <!-- END_TF_DOCS -->
